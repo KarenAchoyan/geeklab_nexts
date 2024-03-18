@@ -1,11 +1,13 @@
+.main{
+    padding-top: 40px;
+}
 .ParentCourse{
-    width: 95%;
+    width: 80%;
     background:transparent;
     margin: auto;
     background: linear-gradient(to right top,#0A0A0B, #0F173E, #0A0A0B, #0D0E1D,#0A0A0B);
     border-radius: 30px;
     padding: 30px;
-    margin-top: 20px;
 }
 .courses{
     width: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Feedback from "@/components/feedback/feedback";
-import App from "@/components/layouts/app";
-import styles from  "@/styles/portfolio.module.css"
+import Feedback from "../../components/feedback/feedback";
+import App from "../../components/layouts/app";
+import styles from  "../../styles/portfolio.module.css"
 import Image from "next/image";
 
 

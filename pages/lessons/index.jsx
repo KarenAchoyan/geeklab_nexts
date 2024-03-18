@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import App from "@/components/layouts/app";
-import homeStyles from "@/styles/Home.module.css";
-import itemStyles from "@/styles/item.module.css";
-import Item from "@/components/item/item";
-import styles from "@/styles/app.module.css";
-import Feedback from "@/components/feedback/feedback";
-import lessonsStyles from "@/styles/lessons.module.css"
+import App from "../../components/layouts/app";
+import homeStyles from "../../styles/Home.module.css";
+import itemStyles from "../../styles/item.module.css";
+import Item from "../../components/item/item";
+import Feedback from "../../components/feedback/feedback";
+import lessonsStyles from "../../styles/lessons.module.css"
 
 const Index = () => {
     const [lessons, setLessons] = useState([

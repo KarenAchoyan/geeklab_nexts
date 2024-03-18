@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import App from "../../components/layouts/app";
-import styles from "@/styles/app.module.css";
-import itemStyles from "@/styles/item.module.css";
-import homeStyles from "@/styles/Home.module.css";
-import Item from "@/components/item/item";
-import Feedback from "@/components/feedback/feedback";
+import styles from "../../styles/app.module.css";
+import itemStyles from "../../styles/item.module.css";
+import homeStyles from "../../styles/Home.module.css";
+import Item from "../../components/item/item";
+import Feedback from "../../components/feedback/feedback";
 import Link from "next/link";
-import Image from "next/image";
 
 
 

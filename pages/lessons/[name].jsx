@@ -1,7 +1,7 @@
 import React from 'react';
-import Feedback from "@/components/feedback/feedback";
-import App from "@/components/layouts/app";
-import styles from  "@/styles/lessons.module.css"
+import Feedback from "../../components/feedback/feedback";
+import App from "../../components/layouts/app";
+import styles from  "../../styles/lessons.module.css"
 import Image from "next/image";
 
 
@@ -9,7 +9,7 @@ import Image from "next/image";
 const Name = () => {
     return (
         <App>
-            <div>
+            <div className={styles.main}>
                 <div className={styles.ParentCourse}>
                     <div className={styles.courses}>
                         <div className={styles.courseName}>
