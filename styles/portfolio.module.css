@@ -1,0 +1,83 @@
+.PageName{
+    width: 86%;
+    height: 60px;
+    margin: auto;
+   padding-top: 50px;
+}
+.PageName h1{
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 1px;
+    text-align: left;
+
+}
+.portfolios{
+    width: 95%;
+    margin: auto;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.PortfolioParents{
+    width: calc(100% / 3 - 40px);
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.portfoliosChildren{
+    width: 100%;
+    height: 250px;
+    border-radius: 30px;
+    border: 1px solid green;
+}
+.portfoliosChildren img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.PortfolioParents h4{
+    font-family: MontserratRegular;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 30px;
+}
+.container h2, .container p{
+    color: white;
+}
+.container input{
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 1000px){
+    .PortfolioParents{
+        width: calc(100% / 2 - 40px);
+
+    }
+    }
+@media only screen and (max-width: 700px){
+    .PortfolioParents{
+        width: calc(100% / 1 - 40px);
+
+    }
+}

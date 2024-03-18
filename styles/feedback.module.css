@@ -1,0 +1,131 @@
+.GetCustomAdvice {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row>div{
+    margin: 20px 0;
+}
+.row>div{
+    width: 45%;
+}
+.GetCustomAdviceText {
+    width: 34%;
+    height: 50%;
+    flex-direction: column;
+    display: grid;
+}
+
+.GetCustomAdviceText h2 {
+    font-family: MontserratRegular;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 0em;
+    color: #000000;
+}
+.GetCustomAdviceText p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-top: 10px;
+    color: #000000B2;
+}
+
+.section{
+    width: 55%;
+    height: 100%;
+}
+.formGroup input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: white;
+    border-bottom: 3px solid #D9D9D9;
+    padding: 0 5px;
+    color: black;
+
+}
+
+.formGroup .inputNumber {
+    width: 90%;
+}
+
+.formGroup img {
+    width: 40px;
+    height: 26px;
+    display: block;
+}
+
+.EnrollButton {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.EnrollButton button {
+    width: 152px;
+    height: 46px;
+    padding: 18px, 37px, 18px, 37px;
+    border-radius: 30px;
+    background: #012DF0;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .section{
+        width: 100%;
+    }
+
+    .formGroup .inputNumber {
+        width: 100%;
+    }
+    .GetCustomAdvice {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .GetCustomAdviceText {
+        width: 100%;
+    }
+
+    .formGroup {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .formGroup input {
+        width: calc(100% / 1);
+        display: inline-block;
+    }
+
+    .formGroup img {
+        display: none;
+    }
+
+    .EnrollButton {
+        margin-top: 10px;
+    }
+}
