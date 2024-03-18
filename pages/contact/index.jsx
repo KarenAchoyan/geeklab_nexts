@@ -9,7 +9,7 @@ const Contact = () => {
         <App>
             <div>
                 <div className={styles.location}>
-                    <span>Our Location</span>
+                    <h1>Our Location</h1>
                 </div>
                 <div className={styles.parentMap}>
                     <div className={styles.map}>

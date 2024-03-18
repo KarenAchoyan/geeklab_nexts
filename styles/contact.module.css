@@ -1,10 +1,9 @@
 .location{
-    width: 272px;
-    height: 109px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    padding-top: 40px;
+    width: 95%;
+    margin: auto;
 }
+
 .parentMap{
     width: 100%;
     height: auto;
@@ -26,13 +25,11 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.location span{
-    font-family: Montserrat;
+.location>h1{
+    font-family: MontserratRegular;
+    color: white;
     font-size: 40px;
-    font-weight: 700;
     line-height: 49px;
-    letter-spacing: 0em;
-    text-align: left;
 }
 
 .container{
