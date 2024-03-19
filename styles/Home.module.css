@@ -1,10 +1,11 @@
 .courses{
-  width: calc(90% - 40px);
+  width: calc(95% - 40px);
   margin: auto auto 50px;
   padding-top: 40px;
 }
 .courses>h1{
   color: white;
+  font-family: MontserratBold;
 }
 .bannerContent{
   width: 50%;

@@ -9,6 +9,7 @@
     border-radius: 30px;
     padding: 30px;
 }
+
 .courses{
     width: 100%;
     display: flex;
@@ -28,6 +29,7 @@
     line-height: 44px;
     letter-spacing: 0em;
     text-align: left;
+    color: white;
 }
 .courseName  h4 span{
     font-family: MontserratRegular;
@@ -92,7 +94,15 @@
     border-radius: 30px;
     background: #012DF0;
     font-size: 22px;
+    color: white;
+    border: none;
 
+}
+.btnSignUp button:hover{
+    color: #012DF0;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid #012DF0;
 }
 .courseInfo{
     width: 100%;
@@ -239,6 +249,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: white;
 
     }
     .courseInfo{

@@ -2,6 +2,8 @@ import React from 'react';
 import styles from "../../styles/app.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import {SearchOutlined} from "@ant-design/icons";
+
 
 const App = ({children}) => {
     return (
@@ -23,11 +25,20 @@ const App = ({children}) => {
                         </ul>
                     </div>
                     <div className={styles.search}>
+
                         <div className={styles.language}>
-                           <span>EN</span>
+                            <SearchOutlined className={styles.searchIcon}/>
+                            <div className={styles.dropdown}>
+                                <span className={styles.dropspan}>En</span>
+                                <div className={styles.dropdownContent}>
+                                    <li>Հայ</li>
+                                </div>
+                            </div>
                         </div>
                         <div className={styles.btn}>
-                            <button>ENROLL NOW</button>
+                           <Link href='/auth/registration'>
+                               <button>ENROLL NOW</button>
+                           </Link>
                         </div>
                     </div>
                 </div>
@@ -48,7 +59,7 @@ const App = ({children}) => {
                             <li><Link href={"/home"}>Main</Link></li>
                             <li><Link href={"/lessons"}>Courses</Link></li>
                             <li><Link href={"/contact"}>Contact Us</Link></li>
-                            <li><Link href={"/about"}>Portfolio</Link></li>
+                            <li><Link href={"/portfolio"}>Portfolio</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -58,3 +69,5 @@ const App = ({children}) => {
 };
 
 export default App;
+
+

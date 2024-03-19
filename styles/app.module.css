@@ -77,6 +77,51 @@
     letter-spacing: 1px;
     color: white;
 }
+.searchIcon{
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+.dropspan{
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: MontserratRegular;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent{
+    width: 60px;
+    height: 30px;
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 5px;
+
+}
+
+.dropdownContent li {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-family: MontserratRegular;
+}
+
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+
 .language select{
     width: 60px;
     border: none;
@@ -103,6 +148,12 @@
     font-size: 16px;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+
+}
+.btn button:hover{
+    color: #270B77;
+    background-color: #e7e4e4;
     cursor: pointer;
 }
 
@@ -133,6 +184,11 @@
     font-size: 16px;
     color: white;
     text-transform: uppercase;
+}
+.discover button:hover{
+    background-color:white ;
+    color: #003BFF;
+    border:1px solid #003BFF;
 }
 
 .courses {
@@ -232,6 +288,7 @@
 
 }
 
+
 @media only screen and (max-width: 1225px) {
     .discover {
         padding-top: 50px;
@@ -247,7 +304,7 @@
 
     }
     .search {
-        width: 50%;
+        width: 30%;
         height: 80%;
         display: flex;
         justify-content: center;
@@ -295,6 +352,16 @@
     }
 
 }
+@media only screen and (max-width: 800px) {
+
+    .search {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -312,7 +379,7 @@
     }
 
     .search {
-        width: 70%;
+        width: 50%;
         height: 80%;
         display: flex;
         justify-content: center;
@@ -325,6 +392,10 @@
 
     .discover {
         width: 60%;
+    }
+    .container{
+        width: 85%;
+        margin-top: 20px;
     }
 
     .footer {
@@ -359,4 +430,14 @@
 
 }
 
+@media only screen and (max-width: 450px) {
+
+    .search {
+        width: 60%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 

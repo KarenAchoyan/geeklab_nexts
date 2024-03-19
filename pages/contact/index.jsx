@@ -2,7 +2,7 @@ import React from 'react';
 import App from '../../components/layouts/app'
 import Feedback from "../../components/feedback/feedback";
 import styles from "../../styles/contact.module.css"
-import {LinkedinOutlined} from "@ant-design/icons";
+import {FacebookOutlined, InstagramOutlined, LinkedinOutlined} from "@ant-design/icons";
 
 const Contact = () => {
     return (
@@ -27,8 +27,8 @@ const Contact = () => {
                         <div className={styles.Contacts}>
                             <h5>Find us</h5>
                             <span><LinkedinOutlined/> LinkedIn</span>
-                            <span>Facebook</span>
-                            <span>Instagram</span>
+                            <span><FacebookOutlined/>Facebook</span>
+                            <span><InstagramOutlined/>Instagram</span>
                         </div>
                     </div>
                 </div>

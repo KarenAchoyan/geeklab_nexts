@@ -1,16 +1,15 @@
 .PageName{
-    width: 86%;
+    width: 90%;
     height: 60px;
     margin: auto;
-   padding-top: 50px;
+    padding-top: 50px;
 }
 .PageName h1{
-    font-family: Montserrat;
+    font-family: MontserratBold;
     font-size: 40px;
     font-weight: 700;
     line-height: 49px;
     letter-spacing: 1px;
-    text-align: left;
     color: white;
 }
 .portfolios{
@@ -20,7 +19,7 @@
     padding: 30px;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -31,13 +30,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 .portfoliosChildren{
     width: 100%;
     height: 250px;
-    border-radius: 30px;
-    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
 }
 .portfoliosChildren img{
     width: 100%;
@@ -51,11 +51,6 @@
     margin-bottom: 20px;
     color: white;
 }
-
-
-
-
-
 
 .container{
     width: 90%;

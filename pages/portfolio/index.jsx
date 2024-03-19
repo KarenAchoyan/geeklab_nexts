@@ -2,7 +2,7 @@ import React from 'react';
 import Feedback from "../../components/feedback/feedback";
 import App from "../../components/layouts/app";
 import styles from  "../../styles/portfolio.module.css"
-import Image from "next/image";
+import Item from "../../components/portfolios/item";
 
 
 const Index = () => {
@@ -14,90 +14,11 @@ const Index = () => {
                 </div>
                 <div className={styles.portfolios}>
 
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-                    <div className={styles.PortfolioParents}>
-                        <div className={styles.portfoliosChildren}>
-                            <Image width={100} height={100} src="/logo.PNG" alt="logo"/>
-
-                        </div>
-                        <h4>Web Site</h4>
-                    </div>
-
+                    <Item/>
+                    <Item/>
+                    <Item/>
+                    <Item/>
+                    <Item/>
 
                 </div>
 
