@@ -59,6 +59,7 @@ const App = ({children}) => {
                         <ul>
                             <li><Link href={"/home"}>Main</Link></li>
                             <li><Link href={"/lessons"}>Courses</Link></li>
+                            <li><Link href={"/designstudio"}>Design Courses</Link></li>
                             <li><Link href={"/contact"}>Contact Us</Link></li>
                             <li><Link href={"/portfolio"}>Portfolio</Link></li>
                         </ul>
