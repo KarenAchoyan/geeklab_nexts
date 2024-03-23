@@ -24,9 +24,6 @@ const Index = () => {
 
             </div>
 
-            <div className={styles.container}>
-                <Feedback/>
-            </div>
         </App>
     );
 };

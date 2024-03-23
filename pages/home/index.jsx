@@ -7,16 +7,11 @@ import Item from "../../components/item/item";
 import Feedback from "../../components/feedback/feedback";
 import Link from "next/link";
 import Head from "next/head";
+import {TypeAnimation} from 'react-type-animation';
+import {lessons} from "@/utils/utils";
 
 
 const Index = () => {
-    const [lessons, setLessons] = useState([
-        {id: 1, title: "Web Development", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-        {id: 2, title: "VUI/UX Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
-        {id: 3, title: "Graphic Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
-        {id: 4, title: "Python", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-        {id: 5, title: "Robotics", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    ])
     return (
         <>
             <Head>
@@ -38,10 +33,27 @@ const Index = () => {
             <App>
                 <div className={homeStyles.banner}>
                     <div className={homeStyles.bannerContent}>
+                        <h1>
+                            <TypeAnimation
+                                sequence={[
+                                    'Unlock Your Potential with Geeklab',
+                                    1000,
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                                repeat={Infinity}
+                            />
+                        </h1>
                         <h2>
-                            Embark on a journey of skill mastery and career readiness through
-                            our intensive courses, paving the way for your success
-                            as a competitive professional in the future.
+                            <TypeAnimation
+                                sequence={[
+                                    ' Welcome to Geeklab, the ultimate destination for aspiring innovators and lifelong learners alike.',
+                                    1000,
+                                    'Here, we\'re more than just a platform – we\'re a community driven by passion, curiosity, and the relentless pursuit of knowledge.',
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                            />
                         </h2>
                     </div>
                     <div className={styles.discover}>
@@ -62,7 +74,7 @@ const Index = () => {
                 </div>
                 <div className={itemStyles.Program}>
                     <div className={itemStyles.programHead}>
-                        <h1>Study Program</h1>
+                        <h2>Study Program</h2>
                         <p>The excellence of our courses lies in the meticulously structured lesson process, blending
                             theoretical and practical sessions seamlessly. This includes thoughtfully crafted homework
                             assignments and opportunities for meaningful interactions with instructors outside the
@@ -116,9 +128,6 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <div className={styles.container}>
-                        <Feedback/>
-                    </div>
 
                 </div>
             </App>

@@ -37,9 +37,9 @@ const App = ({children}) => {
                             </div>
                         </div>
                         <div className={styles.btn}>
-                           <Link href='/auth/registration'>
-                               <button>ENROLL NOW</button>
-                           </Link>
+                            <a href="tel:+37444777344" className="signup-button">
+                                <button>Sign up</button>
+                            </a>
                         </div>
                     </div>
                 </div>

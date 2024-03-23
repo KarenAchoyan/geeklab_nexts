@@ -7,13 +7,23 @@
   color: white;
   font-family: MontserratBold;
 }
+.banner{
+  padding-top: 100px;
+}
 .bannerContent{
   width: 50%;
   height: 50%;
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.bannerContent h1{
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 .banner{
   width: 100%;
@@ -51,7 +61,7 @@
     padding-top: 50px;
   }
   .bannerContent{
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +73,7 @@
     line-height: 28px;
   }
   .courses{
-    margin-top: 50px;
+    /*margin-top: 50px;*/
   }
 
 }

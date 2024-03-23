@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Feedback from "../../components/feedback/feedback";
 import App from "../../components/layouts/app";
 import styles from "../../styles/lessons.module.css"
 import Image from "next/image";
@@ -51,7 +50,9 @@ const Name = () => {
                             <div className={styles.signUp}>
                                 <div className={styles.join}><p>Join us and elevate your design prowess today!</p></div>
                                 <div className={styles.btnSignUp}>
-                                    <button>Sign up</button>
+                                    <a href="tel:+37444777344" className="signup-button">
+                                        <button>Sign up</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -82,21 +83,21 @@ const Name = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.Statistics}>
-                            <div className={styles.staticChildren}>
-                                <span>Statistics</span>
-                            </div>
-                            <div className={styles.ParentStaticChildren}>
-                                <div className={styles.staticChildren}>
-                                    <span>600,000</span>
-                                    <p>Avarage salary</p>
-                                </div>
+                        {/*<div className={styles.Statistics}>*/}
+                            {/*<div className={styles.staticChildren}>*/}
+                            {/*    <span>Statistics</span>*/}
+                            {/*</div>*/}
+                            {/*<div className={styles.ParentStaticChildren}>*/}
+                                {/*<div className={styles.staticChildren}>*/}
+                                {/*    <span>600,000</span>*/}
+                                {/*    <p>Avarage salary</p>*/}
+                                {/*</div>*/}
                                 {/*<div className={styles.staticChildren}>*/}
                                 {/*    <span>15+</span>*/}
                                 {/*    <p>Vacancies</p>*/}
                                 {/*</div>*/}
-                            </div>
-                        </div>
+                            {/*</div>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
 

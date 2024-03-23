@@ -22,13 +22,7 @@ export const designLessons = [
 
 export const lessons = [
     {id: 3, title: "Web Development", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    {id: 4, title: "VUI/UX Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
+    {id: 4, title: "UI/UX Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
     {id: 5, title: "Graphic Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
-    {id: 6, title: "Python", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    {id: 7, title: "Robotics", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    {id: 8, title: "Web Development", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
-    {id: 9, title: "VUI/UX Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
-    {id: 10, title: "Graphic Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    {id: 11, title: "Python", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
-    {id: 12, title: "Robotics", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
+    {id: 6, title: "Python", duration: "3 month", price: "50.000", Deadline: "01/03/2024", isWhite: true},
 ];

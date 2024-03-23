@@ -156,10 +156,10 @@
 
 }
 
-.programHead h1 {
+.programHead h2 {
     color: #000000;
     font-family: MontserratRegular;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 500;
     line-height: 59px;
     letter-spacing: 0em;
@@ -237,6 +237,7 @@
         margin-bottom: 50px;
     }
 
+
     .programItem {
         width: calc(100% / 2 - 40px);
         margin-top: 40px;
@@ -255,12 +256,26 @@
     }
 
     .programHead {
-        width: 100%;
+        width: 90%;
+        margin:auto;
+    }
+    .programHead h2{
+        font-size: 28px;
     }
 
     .programItem {
         width: calc(100% / 1 - 40px);
         margin-top: 40px;
     }
-
+    .programRow{
+        width: 90%;
+        padding-bottom: 80px;
+    }
+    .Program{
+        width: 100%;
+        padding: 0;
+    }
+    .lessonName{
+        font-size: 20px;
+    }
 }

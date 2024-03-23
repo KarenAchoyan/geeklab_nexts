@@ -1,6 +1,5 @@
 import React from 'react';
 import App from '../../components/layouts/app'
-import Feedback from "../../components/feedback/feedback";
 import styles from "../../styles/contact.module.css"
 import {FacebookOutlined, InstagramOutlined, LinkedinOutlined} from "@ant-design/icons";
 import Head from "next/head";
