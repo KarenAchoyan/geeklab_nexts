@@ -6,19 +6,35 @@ import homeStyles from "../../styles/Home.module.css";
 import Item from "../../components/item/item";
 import Feedback from "../../components/feedback/feedback";
 import Link from "next/link";
-
+import Head from "next/head";
 
 
 const Index = () => {
     const [lessons, setLessons] = useState([
-        {id: 1, title: "Web Development", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true   },
+        {id: 1, title: "Web Development", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
         {id: 2, title: "VUI/UX Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
         {id: 3, title: "Graphic Design", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: false},
         {id: 4, title: "Python", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
         {id: 5, title: "Robotics", duration: "3 month", price: "40.000", Deadline: "01/03/2024", isWhite: true},
     ])
     return (
-        <div>
+        <>
+            <Head>
+                <title>GeekLab - Learn Programming, Interior Design, and AutoCAD</title>
+                <meta name="description"
+                      content="GeekLab offers high-quality programming languages lessons, interior design education lessons, and AutoCAD tutorials. Start learning today!"/>
+                <meta name="keywords"
+                      content="GeekLab, programming languages, interior design, AutoCAD, tutorials, lessons, learn programming, learn interior design, learn AutoCAD"/>
+                <meta name="robots" content="index, follow"/>
+                <meta name="author" content="Your Name or GeekLab Team"/>
+                <link rel="canonical" href="https://www.geeklab.am/"/>
+                <meta property="og:title" content="GeekLab - Learn Programming, Interior Design, and AutoCAD"/>
+                <meta property="og:description"
+                      content="GeekLab offers high-quality programming languages lessons, interior design education lessons, and AutoCAD tutorials. Start learning today!"/>
+                <meta property="og:image" content="https://www.geeklab.am/logo.PNG"/>
+                <meta property="og:url" content="https://www.geeklab.am/"/>
+                <meta property="og:type" content="website"/>
+            </Head>
             <App>
                 <div className={homeStyles.banner}>
                     <div className={homeStyles.bannerContent}>
@@ -107,7 +123,7 @@ const Index = () => {
                 </div>
             </App>
 
-        </div>
+        </>
 
     );
 

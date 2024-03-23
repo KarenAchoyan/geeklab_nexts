@@ -59,6 +59,7 @@
     flex-direction: column;
 }
 .Contacts h5{
+    margin-bottom: 20px;
     font-family: MontserratBold;
     font-size: 30px;
     font-weight: 700;

@@ -27,7 +27,7 @@ const Item = ({isWhite = false, item}) => {
 
                 </div>
                 <div className={styles.lessonButton}>
-                    <Link href={"/lessons/" + item.id}>
+                    <Link href={"/lessons/" + item.title}>
                         <button>APPLY NOW</button>
                     </Link>
 

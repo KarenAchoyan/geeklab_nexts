@@ -5,7 +5,7 @@ import itemStyles from "../../styles/item.module.css";
 import Item from "../../components/item/item";
 import Feedback from "../../components/feedback/feedback";
 import lessonsStyles from "../../styles/lessons.module.css"
-import {lessons} from "../../utils/utils";
+import {designLessons, lessons} from "../../utils/utils";
 
 const Index = () => {
 
@@ -13,17 +13,14 @@ const Index = () => {
         <div>
             <App>
                 <div className={homeStyles.courses}>
-                    <h1>Discover Courses</h1>
+                    <h1>Design Studio</h1>
                 </div>
                 <div className={itemStyles.row}>
-
-                    {lessons.map((item) => (
+                    {designLessons.map((item) => (
                         <Item key={item.id} isWhite={item.isWhite} item={item}/>
                     ))}
                 </div>
-                <div className={lessonsStyles.container}>
-                    <Feedback/>
-                </div>
+
             </App>
         </div>
     );
