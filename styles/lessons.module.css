@@ -18,7 +18,7 @@
     padding-top: 60px;
 }
 .courseName{
-    width: calc(100% / 2 - 127px);
+    width: calc(100% / 1 - 127px);
     display: flex;
     justify-content: center;
     flex-direction: column;

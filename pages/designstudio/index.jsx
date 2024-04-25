@@ -3,8 +3,6 @@ import App from "../../components/layouts/app";
 import homeStyles from "../../styles/Home.module.css";
 import itemStyles from "../../styles/item.module.css";
 import Item from "../../components/item/item";
-import Feedback from "../../components/feedback/feedback";
-import lessonsStyles from "../../styles/lessons.module.css"
 import {designLessons, lessons} from "../../utils/utils";
 
 const Index = () => {

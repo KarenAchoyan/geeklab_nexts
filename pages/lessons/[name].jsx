@@ -37,43 +37,35 @@ const Name = () => {
                         <div className={styles.courses}>
                             <div className={styles.courseName}>
                                 <h4>Welcome to <span>{content?.title}!</span></h4>
-                                <p>Unlock the secrets of great design with our UI/UX course.
-                                    Dive into the world of User Interface
-                                    (UI) and User Experience (UX) design,
-                                    where creativity meets functionality.
-                                    From wireframing to prototyping,
-                                    our specialized
-                                    curriculum empowers you to
-                                    create compelling digital
-                                    experiences.</p>
+                                <p>{content?.content}</p>
                             </div>
-                            <div className={styles.signUp}>
-                                <div className={styles.join}><p>Join us and elevate your design prowess today!</p></div>
-                                <div className={styles.btnSignUp}>
-                                    <a href="tel:+37444777344" className="signup-button">
-                                        <button>Sign up</button>
-                                    </a>
-                                </div>
-                            </div>
+                            {/*<div className={styles.signUp}>*/}
+                            {/*    <div className={styles.join}><p>Join us and elevate your design prowess today!</p></div>*/}
+                            {/*    <div className={styles.btnSignUp}>*/}
+                            {/*        <a href="tel:+37444777344" className="signup-button">*/}
+                            {/*            <button>Sign up</button>*/}
+                            {/*        </a>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
                         <div className={styles.courseInfo}>
                             <div className={styles.informationParent}>
                                 <div className={styles.information}>
                                     <Image width={100} height={100} src="/Frame1.png" alt=""/>
                                     <p>Duration</p>
-                                    <p>{content.duration}</p>
+                                    <p>{content?.duration}</p>
                                 </div>
                                 <div className={styles.information}>
                                     <Image width={100} height={100} src="/Frame2.png" alt=""/>
                                     <p>Monthly fee</p>
-                                    <p>{content.price}</p>
+                                    <p>{content?.price}</p>
                                 </div>
                             </div>
                             <div className={styles.informationParent}>
                                 <div className={styles.information}>
                                     <Image width={100} height={100} src="/Frame3.png" alt=""/>
                                     <p>Deadline</p>
-                                    <p>{content.Deadline}</p>
+                                    <p>{content?.Deadline}</p>
                                 </div>
                                 <div className={styles.information}>
                                     <Image width={100} height={100} src="/Frame4.png" alt=""/>

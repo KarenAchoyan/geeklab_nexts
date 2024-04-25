@@ -1,11 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "../../styles/app.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import {SearchOutlined} from "@ant-design/icons";
+import {useRouter} from "next/dist/client/compat/router";
+import {languages} from "../../utils/utils";
 
 
 const App = ({children}) => {
+    const router = useRouter();
+    const [currentLanguage, setCurrentLanguage] = useState('Հայ')
+    const [langs, setLangs] = useState([]);
+    const { pathname, asPath, query } = router
+
+    useEffect(() => {
+        let l = JSON.parse(localStorage.getItem('lang')) || {name: 'Հայ', flag: '/amFlag.png'}
+        setCurrentLanguage(l.name)
+        const language = languages.find(x=>x.name===l.name);
+
+        const locales = language.value;
+        router.push({ pathname, query }, asPath, { locale: locales })
+    }, [])
+
+    useEffect(() => {
+        setLangs(languages.filter(x => x.name !== currentLanguage))
+    }, [currentLanguage])
+
+    const changeLanguage = (newLang, item) => {
+        setCurrentLanguage(item.name)
+        const l = JSON.stringify({name: item.name, flag: item.flag})
+        localStorage.setItem('lang', l);
+    };
+
+
     return (
         <>
             <header className={styles.header}>
@@ -30,9 +57,19 @@ const App = ({children}) => {
                         <div className={styles.language}>
                             <SearchOutlined className={styles.searchIcon}/>
                             <div className={styles.dropdown}>
-                                <span className={styles.dropspan}>En</span>
+                                <span className={styles.dropspan}>{currentLanguage}</span>
                                 <div className={styles.dropdownContent}>
-                                    <li>Հայ</li>
+                                   <ul>
+                                       {langs.map((item) => (
+                                           <li key={item.id}>
+                                               <Link href={'#'} locale={item.value} onClick={() => changeLanguage(item.value, item)}>
+                                                   <div className={styles.drbLangRow}>
+                                                       <span>{item.name}</span>
+                                                   </div>
+                                               </Link>
+                                           </li>
+                                       ))}
+                                   </ul>
                                 </div>
                             </div>
                         </div>

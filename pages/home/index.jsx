@@ -9,9 +9,11 @@ import Link from "next/link";
 import Head from "next/head";
 import {TypeAnimation} from 'react-type-animation';
 import {lessons} from "@/utils/utils";
+import {t} from "../../utils/utils";
 
 
 const Index = () => {
+
     return (
         <>
             <Head>
@@ -36,7 +38,7 @@ const Index = () => {
                         <h1>
                             <TypeAnimation
                                 sequence={[
-                                    'Unlock Your Potential with Geeklab',
+                                    t("welcome"),
                                     1000,
                                 ]}
                                 wrapper="span"
@@ -58,7 +60,7 @@ const Index = () => {
                     </div>
                     <div className={styles.discover}>
                         <Link href='/lessons'>
-                            <button className={styles.btn1}>discover courses</button>
+                            <button className={styles.btn1}>discover courses {t('hello')}</button>
                         </Link>
 
                     </div>
