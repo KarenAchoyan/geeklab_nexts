@@ -47,7 +47,6 @@ const App = ({children}) => {
                             <li><Link href='/home'>Main</Link></li>
                             <li><Link href='/contact'>Contact Us</Link></li>
                             <li><Link href='/lessons'>Lessons</Link></li>
-                            <li><Link href='/designstudio'>Design</Link></li>
                             <li><Link href='/portfolio'>Portfolio</Link></li>
 
                         </ul>

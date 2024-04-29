@@ -38,7 +38,7 @@ const Index = () => {
                         <h1>
                             <TypeAnimation
                                 sequence={[
-                                    t("welcome"),
+                                   "Unlock Your Potential with Geeklab",
                                     1000,
                                 ]}
                                 wrapper="span"
