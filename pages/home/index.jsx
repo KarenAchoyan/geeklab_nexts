@@ -60,7 +60,7 @@ const Index = () => {
                     </div>
                     <div className={styles.discover}>
                         <Link href='/lessons'>
-                            <button className={styles.btn1}>discover courses {t('hello')}</button>
+                            <button className={styles.btn1}>discover courses</button>
                         </Link>
 
                     </div>
