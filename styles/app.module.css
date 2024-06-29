@@ -262,12 +262,10 @@
 }
 
 .user1 {
-    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .user1 ul {
@@ -285,7 +283,7 @@
     font-size: 20px;
     letter-spacing: 0em;
     color: #FFFFFF99;
-
+    margin-left: 30px;
 }
 
 

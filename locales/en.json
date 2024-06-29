@@ -1,4 +1,16 @@
 {
   "hello": "Hello",
-  "welcome": "'Unlock Your Potential with Geeklab"
+  "welcome": "'Unlock Your Potential with Geeklab",
+  "duration": "Duration",
+  "price": "Price",
+  "deadline": "Deadline",
+  "apply_now": "Apply now",
+  "sign_up": "Sign up",
+  "month": "month",
+  "amd": "amd",
+  "our_lessons":"Our courses",
+  "contact_us" : "Contact us",
+  "lessons": "Lessons",
+  "portfolio": "Portfolio",
+  "main": "Main"
 }

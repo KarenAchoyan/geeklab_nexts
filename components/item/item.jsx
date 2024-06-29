@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "@/styles/item.module.css";
 import Link from "next/link";
+import {t} from "../../utils/utils";
 
 
 const Item = ({isWhite = false, item}) => {
@@ -13,22 +14,22 @@ const Item = ({isWhite = false, item}) => {
                 </div>
                 <div className={styles.lessonInfo}>
                     <div className={styles.lessonInfoText}>
-                        <span>Duration:</span>
-                        <span className={styles.lessonName}>{item.duration}</span>
+                        <span>{t('duration')}:</span>
+                        <span className={styles.lessonName}>{item.duration}{t('month')}</span>
                     </div>
                     <div className={styles.lessonInfoText}>
-                        <span>Price:</span>
-                        <span className={styles.lessonName}>{item.price}</span>
+                        <span>{t('price')}:</span>
+                        <span className={styles.lessonName}>{item.price} {t('amd')}</span>
                     </div>
                     <div className={styles.lessonInfoText}>
-                        <span>Deadline:</span>
+                        <span>{t('deadline')}:</span>
                         <span className={styles.lessonName}>{item.Deadline}</span>
                     </div>
 
                 </div>
                 <div className={styles.lessonButton}>
                     <Link href={"/lessons/" + item.title}>
-                        <button>APPLY NOW</button>
+                        <button>{t('apply_now')}</button>
                     </Link>
 
                 </div>

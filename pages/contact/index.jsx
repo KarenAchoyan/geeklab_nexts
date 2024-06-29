@@ -37,14 +37,14 @@ const Contact = () => {
                             <div className={styles.Contacts}>
                                 <h5>Contacts</h5>
                                 <span>3 Hakob Hakobyan St, Yerevan 0033</span>
-                                <span>(374) 90 00 00 00</span>
-                                <span>geeklab@gmail.com</span>
+                                <span>(374) 44 777 344</span>
+                                <span>info@geeklab.am</span>
                             </div>
                             <div className={styles.Contacts}>
                                 <h5>Find us</h5>
-                                <span><LinkedinOutlined/> LinkedIn</span>
-                                <span><FacebookOutlined/>Facebook</span>
-                                <span><InstagramOutlined/>Instagram</span>
+                                <span><a href="https://www.linkedin.com/in/karen-achoyan-2481011a2/"><LinkedinOutlined/> LinkedIn</a></span>
+                                <span><a href="https://www.facebook.com/geeklabSchool"><FacebookOutlined/>Facebook</a></span>
+                                <span><a href="https://www.instagram.com/geeklab.am/"><InstagramOutlined/>Instagram</a></span>
                             </div>
                         </div>
                     </div>

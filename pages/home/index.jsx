@@ -66,7 +66,7 @@ const Index = () => {
                     </div>
                 </div>
                 <div className={homeStyles.courses}>
-                    <h1>Discover Courses</h1>
+                    <h1>{t('our_lessons')}</h1>
                 </div>
                 <div className={itemStyles.row}>
 

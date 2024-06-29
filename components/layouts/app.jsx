@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {SearchOutlined} from "@ant-design/icons";
 import {useRouter} from "next/dist/client/compat/router";
-import {languages} from "../../utils/utils";
+import {languages, t} from "../../utils/utils";
 
 
 const App = ({children}) => {
@@ -44,11 +44,10 @@ const App = ({children}) => {
                     </div>
                     <div className={styles.user}>
                         <ul>
-                            <li><Link href='/home'>Main</Link></li>
-                            <li><Link href='/contact'>Contact Us</Link></li>
-                            <li><Link href='/lessons'>Lessons</Link></li>
-                            <li><Link href='/portfolio'>Portfolio</Link></li>
-
+                            <li><Link href='/home'>{t('main')}</Link></li>
+                            <li><Link href='/portfolio'>{t('portfolio')}</Link></li>
+                            <li><Link href='/lessons'>{t('lessons')}</Link></li>
+                            <li><Link href='/contact'>{t('contact_us')}</Link></li>
                         </ul>
                     </div>
                     <div className={styles.search}>
@@ -95,7 +94,7 @@ const App = ({children}) => {
                         <ul>
                             <li><Link href={"/home"}>Main</Link></li>
                             <li><Link href={"/lessons"}>Courses</Link></li>
-                            <li><Link href={"/designstudio"}>Design Courses</Link></li>
+                            <li><Link href={"/designstudio"}>Interior Design</Link></li>
                             <li><Link href={"/contact"}>Contact Us</Link></li>
                             <li><Link href={"/portfolio"}>Portfolio</Link></li>
                         </ul>
