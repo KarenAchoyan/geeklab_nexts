@@ -11,8 +11,7 @@ const Index = () => {
             <App>
                 <div className={homeStyles.courses}>
                     <h1>Design Studio</h1>
-                    <p>ՇՈՒՏՈՎ պարտաստ կլինի Ինտերիեր դիզայնի համար նախատեսված մեր կայքը որի մեջ կտեղադրվեն ամոբղջ մեջ պորտֆոլիոն</p>
-
+                    <p>ՇՈՒՏՈՎ պարտաստ կլինի Ինտերիեր դիզայնի համար նախատեսված մեր կայքը որի մեջ կտեղադրվի ամբողջ մեր պորտֆոլիոն</p>
                 </div>
                 <div className={itemStyles.row}>
                     {designPortfolios.map((item)=>(
