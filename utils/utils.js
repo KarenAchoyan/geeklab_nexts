@@ -102,10 +102,10 @@ export const portfolios = [
 ]
 
 export const designPortfolios = [
-    {id: 1, image: "/eua.png", title: "European University of Armenia", },
-    {id: 2, image: "/poel.png", title: "Peol",},
-    {id: 3, image: "/ellara.png", title: "Ellara Accounting"},
-    {id: 4, image: "/trichq.png", title: "Թռիչք արշավական ակումբ"},
-    {id: 5, image: "/infinite.png", title: "Infinite"},
-    {id: 6, image: "/5.png", title: "ԴԱՀԿ"},
+    {id: 1, image: "https://ellara.geeklab.am/storage/geeklab/bath%201.jpg"},
+    {id: 2, image: "https://ellara.geeklab.am/storage/geeklab/cam001.jpg"},
+    {id: 3, image: "https://ellara.geeklab.am/storage/geeklab/Cam%20004.jpg"},
+    {id: 4, image: "https://ellara.geeklab.am/storage/geeklab/cam%20006.jpg"},
+    {id: 5, image: "https://ellara.geeklab.am/storage/geeklab/master-5.jpg"},
+    {id: 6, image: "https://ellara.geeklab.am/storage/geeklab/kid%20cam%201.jpg"},
 ]

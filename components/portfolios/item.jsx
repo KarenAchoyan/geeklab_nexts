@@ -7,7 +7,7 @@ const Item = ({item}) => {
         <div className={styles.PortfolioParents}>
             <div className={styles.portfoliosChildren}>
                 <a href={item.path ? item.path : "#"}>
-                    <Image width={1000} height={400} src={item.image} alt="logo"/>
+                    <Image width={800} height={400} src={item.image} alt="logo"/>
                 </a>
             </div>
             <h4>{item.title}</h4>
