@@ -266,6 +266,7 @@
     .programItem {
         width: calc(100% / 1 - 40px);
         margin-top: 40px;
+
     }
     .programRow{
         width: 90%;

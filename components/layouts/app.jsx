@@ -18,7 +18,7 @@ const App = ({children}) => {
         setCurrentLanguage(l.name)
         const language = languages.find(x=>x.name===l.name);
 
-        const locales = language.value;
+        const locales = language?.value || "hy";
         router.push({ pathname, query }, asPath, { locale: locales })
     }, [])
 

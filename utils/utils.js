@@ -1,5 +1,13 @@
-import {useState} from "react";
 import {useIntl} from "react-intl";
+import React from 'react';
+import {
+    DashboardOutlined,
+    UserOutlined,
+    AppstoreOutlined,
+    TeamOutlined,
+    BookOutlined,
+    FileOutlined,
+} from '@ant-design/icons';
 
 export const validateEmail = (rule, value) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -109,3 +117,63 @@ export const designPortfolios = [
     {id: 5, image: "https://ellara.geeklab.am/storage/geeklab/master-5.jpg"},
     {id: 6, image: "https://ellara.geeklab.am/storage/geeklab/kid%20cam%201.jpg"},
 ]
+
+export const menuItems = [
+    {
+        key: 'dashboard',
+        icon: <DashboardOutlined />,
+        label: 'Dashboard',
+        path: '/dashboard',
+    },
+    {
+        key: 'my-groups',
+        icon: <TeamOutlined />,
+        label: 'My Groups',
+        children: [
+            {
+                key: 'all-groups',
+                label: 'All Groups',
+                path: '/my-groups/all-groups',
+            },
+            {
+                key: 'add-group',
+                label: 'Add Group',
+                path: '/my-groups/add-group',
+            },
+            {
+                key: 'add-student',
+                label: 'Add Student',
+                path: '/my-groups/add-student',
+            },
+        ],
+    },
+    {
+        key: 'my-lessons',
+        icon: <BookOutlined />,
+        label: 'My Lessons',
+        children: [
+            {
+                key: 'all-lessons',
+                label: 'All Lessons',
+                path: '/my-lessons/all-lessons',
+            },
+            {
+                key: 'add-lesson',
+                label: 'Add Lesson',
+                path: '/my-lessons/add-lesson',
+            },
+        ],
+    },
+    {
+        key: 'homeworks',
+        icon: <FileOutlined />,
+        label: 'Homeworks',
+        path: '/homeworks',
+    },
+    {
+        key: 'all-students',
+        icon: <UserOutlined />,
+        label: 'All Students',
+        path: '/all-students',
+    },
+];
