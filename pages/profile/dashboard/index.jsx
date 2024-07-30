@@ -22,6 +22,7 @@ const Index = () => {
                             userImage="/register.png"
                         />
                         <Post/>
+                      <h1>Test</h1>
                     </Content>
                 </Layout>
             </App>
