@@ -123,7 +123,7 @@ export const menuItems = [
         key: 'dashboard',
         icon: <DashboardOutlined />,
         label: 'Dashboard',
-        path: '/dashboard',
+        path: '/profile/dashboard',
     },
     {
         key: 'my-groups',
@@ -133,17 +133,17 @@ export const menuItems = [
             {
                 key: 'all-groups',
                 label: 'All Groups',
-                path: '/my-groups/all-groups',
+                path: '/profile/groups/all',
             },
             {
                 key: 'add-group',
                 label: 'Add Group',
-                path: '/my-groups/add-group',
+                path: '/profile/groups/add',
             },
             {
                 key: 'add-student',
                 label: 'Add Student',
-                path: '/my-groups/add-student',
+                path: '/profile/students/add',
             },
         ],
     },
@@ -155,12 +155,12 @@ export const menuItems = [
             {
                 key: 'all-lessons',
                 label: 'All Lessons',
-                path: '/my-lessons/all-lessons',
+                path: '/profile/lessons/all',
             },
             {
                 key: 'add-lesson',
                 label: 'Add Lesson',
-                path: '/my-lessons/add-lesson',
+                path: '/profile/lessons/add',
             },
         ],
     },
@@ -168,12 +168,12 @@ export const menuItems = [
         key: 'homeworks',
         icon: <FileOutlined />,
         label: 'Homeworks',
-        path: '/homeworks',
+        path: '/profile/homeworks',
     },
     {
         key: 'all-students',
         icon: <UserOutlined />,
         label: 'All Students',
-        path: '/all-students',
+        path: '/profile/students',
     },
 ];
