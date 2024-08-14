@@ -3,6 +3,8 @@ import {IntlProvider} from "react-intl";
 import {useRouter} from "next/dist/client/compat/router";
 import en from "../locales/en.json"
 import hy from "../locales/hy.json"
+import 'antd/dist/reset.css';
+import '../styles/globals.css';
 
 const messages = {
     en,
