@@ -1,7 +1,6 @@
 import Head from "next/head";
 import {Inter} from "next/font/google";
 import Index from "@/pages/home";
-import Index from '@/pages/profile/homeworks/index'
 const inter = Inter({subsets: ["latin"]});
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
                 <meta property="og:url" content="https://www.geeklab.am/" />
                 <meta property="og:type" content="website" />
             </Head>
-            <Index/>
             <Index/>
 
         </>

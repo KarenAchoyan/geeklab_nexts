@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['ellara.geeklab.am'],
+    domains: ['geeklab.dahk.am'],
   },
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'hy'],
-    defaultLocale: 'hy',
+    defaultLocale: 'en',
     localeDetection: false
   },
   unoptimized: true

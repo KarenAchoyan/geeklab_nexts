@@ -103,10 +103,10 @@ export function t(key) {
 export const portfolios = [
     {id: 1, image: "/eua.png", title: "European University of Armenia", path:"https://eua.am/"},
     {id: 2, image: "/poel.png", title: "Peol", path: "https://www.poel.am/home"},
-    {id: 3, image: "/ellara.png", title: "Ellara Accounting"},
-    {id: 4, image: "/trichq.png", title: "Թռիչք արշավական ակումբ"},
-    {id: 5, image: "/infinite.png", title: "Infinite"},
-    {id: 6, image: "/5.png", title: "ԴԱՀԿ"},
+    {id: 3, image: "/cool.png", title: "Cool language Center", path: "https://cool-ruby.vercel.app/en"},
+    {id: 4, image: "/trichq.png", title: "Թռիչք արշավական ակումբ", path: "https://www.trichq.am/"},
+    {id: 5, image: "/infinite.png", title: "Infinite", path: "https://infinitestyle.net/"},
+    {id: 6, image: "/5.png", title: "ԴԱՀԿ", path: "https://www.dahk.am/"},
 ]
 
 export const designPortfolios = [

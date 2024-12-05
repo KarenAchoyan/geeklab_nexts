@@ -5,14 +5,16 @@ import Image from "next/image";
 const Item = ({item}) => {
     return (
         <div className={styles.PortfolioParents}>
-            <div className={styles.portfoliosChildren}>
-                <a href={item.path ? item.path : "#"}>
-                    <Image width={800} height={400} src={item.image} alt="logo"/>
-                </a>
-            </div>
-            <h4>{item.title}</h4>
+            <a href={item.path ? item.path : "#"}>
+
+                <div className={styles.portfoliosChildren}>
+                    <Image width={800} height={400} src={"https://geeklab.dahk.am/storage/"+item.image} alt="logo"/>
+                </div>
+            </a>
+
         </div>
-    );
+    )
+        ;
 };
 
 export default Item;
