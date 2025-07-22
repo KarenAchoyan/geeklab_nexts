@@ -1,25 +1,24 @@
-import "@/styles/globals.css";
+import '@/styles/globals.css'
 import {IntlProvider} from "react-intl";
-import {useRouter} from "next/dist/client/compat/router";
-import en from "../locales/en.json"
-import hy from "../locales/hy.json"
-import 'antd/dist/reset.css';
-import '../styles/globals.css';
+import hy from '../locales/hy.json';
+import en from '../locales/en.json';
+import ge from '../locales/ge.json';
+import {useRouter} from "next/router";
+import '@formatjs/intl-numberformat/polyfill';
+import '@formatjs/intl-numberformat/locale-data/ka'; // Georgian locale
 
 const messages = {
+    hy,
     en,
-    hy
+    ge
 }
 
-function App({Component, pageProps}) {
-    const router = useRouter();
-    const {locale} = router;
 
+export default function App({Component, pageProps}) {
+    const {locale} = useRouter();
     return (
-        <IntlProvider locale={locale} messages={(messages)[locale]}>
+        <IntlProvider locale={locale} messages={messages[locale]}>
             <Component {...pageProps} />
         </IntlProvider>
     )
 }
-
-export default App

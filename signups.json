@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Karen",
+    "email": "k.achoyan@geeklab.am",
+    "phone": "077661699",
+    "branch": "armenia_yerevan",
+    "course": "Python-development"
+  },
+  {
+    "name": "Karen",
+    "email": "kk@mail.ru",
+    "phone": "312312321",
+    "branch": "armenia_yerevan",
+    "course": "Front-end-development"
+  }
+]

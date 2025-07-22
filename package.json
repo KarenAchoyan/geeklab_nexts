@@ -12,6 +12,7 @@
     "antd": "^5.6.3",
     "axios": "^1.4.0",
     "draft-js": "^0.11.7",
+    "jodit-react": "^5.2.15",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
     "next": "13.4.7",
@@ -34,16 +35,21 @@
     "redux-actions": "^3.0.0",
     "redux-saga": "^1.2.3",
     "sass": "^1.63.6",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.12",
     "@types/node": "20.10.5",
+    "autoprefixer": "^10.4.20",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "postcss": "^8.5.3",
     "prettier": "2.6.2",
     "react-intl": "^6.5.5",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "tailwindcss": "^4.0.12"
   }
 }

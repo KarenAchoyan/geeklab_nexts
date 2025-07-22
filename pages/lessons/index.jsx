@@ -1,26 +1,25 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import styles from "../../styles/lessons.module.css"
 import App from "../../components/layouts/app";
-import homeStyles from "../../styles/Home.module.css";
-import itemStyles from "../../styles/item.module.css";
 import Item from "../../components/item/item";
-import {lessons} from "../../utils/utils";
+import {getLessons} from "../../utils/utils";
+import Head from "next/head";
 
 const Index = () => {
+    const [lessons, setLessons] = useState([]);
+
+    useEffect(() => {
+        setLessons(getLessons());
+    }, []);
 
     return (
-        <div>
-            <App>
-                <div className={homeStyles.courses}>
-                    <h1>Discover Courses</h1>
-                </div>
-                <div className={itemStyles.row}>
-
-                    {lessons.map((item) => (
-                        <Item key={item.id} isWhite={item.isWhite} item={item}/>
-                    ))}
-                </div>
-            </App>
-        </div>
+        <App>
+            <div className={styles.row}>
+                {lessons.map((item) => (
+                    <Item key={item.id} item={item}/>
+                ))}
+            </div>
+        </App>
     );
 };
 

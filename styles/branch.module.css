@@ -1,0 +1,90 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 32, 48, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30, 32, 48, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #22223b;
+  letter-spacing: 0.02em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.branchButton {
+  padding: 0.75rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30, 32, 48, 0.08);
+  outline: none;
+}
+
+.armenia {
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  color: #22223b;
+}
+.armenia:hover, .armenia:focus {
+  background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+  color: #fff;
+}
+
+.georgia {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+}
+.georgia:hover, .georgia:focus {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .modalContent {
+    min-width: 90vw;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .modalTitle {
+    font-size: 1.3rem;
+  }
+  .branchButton {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .buttons {
+    gap: 0.7rem;
+  }
+} 

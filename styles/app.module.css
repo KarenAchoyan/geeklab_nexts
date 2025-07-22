@@ -32,7 +32,6 @@
 }
 
 .user ul {
-    width: 60%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -48,6 +47,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: Courier New;
+    margin-left: 20px;
 
 }
 
@@ -104,6 +104,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin-top: 5px;
+
 
 }
 
@@ -286,6 +287,113 @@
     margin-left: 30px;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+@media only screen and (max-width: 1225px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 62, 0.98);
+  z-index: 1100;
+  padding-top: 120px;
+  transition: opacity 0.3s ease;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileMenu li {
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Courier New;
+}
+
+.mobileMenu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobileMenu li a:hover {
+  color: #e7e4e4;
+}
+
+@media only screen and (min-width: 1226px) {
+  .mobileMenu {
+    display: none !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+.desktopOnly {
+  display: flex;
+}
+@media only screen and (max-width: 1225px) {
+  .desktopOnly {
+    display: none !important;
+  }
+}
+
+.mobileMenuSignup {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mobileMenuSignup button {
+  width: 80vw;
+  max-width: 320px;
+  padding: 18px 0;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #0A0A0B 0%, #0F173E 100%);
+  color: #fff;
+  font-size: 18px;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(39,11,119,0.15);
+  margin: 2rem auto 0 auto;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.mobileMenuSignup button:hover {
+  background: #fff;
+  color: #270B77;
+  border: 1px solid #270B77;
+}
 
 @media only screen and (max-width: 1225px) {
     .discover {
@@ -440,5 +548,44 @@
     .btn1{
         padding: 18px 20px 18px 20px;
     }
+}
+
+.mobileMenuLang {
+  margin: 2rem auto 0 auto;
+  text-align: center;
+}
+.mobileMenuLangLabel {
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.mobileMenuLang ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mobileMenuLangBtn {
+  background: #fff;
+  color: #0F173E;
+  border: 2px solid #0F173E;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.mobileMenuLangBtn:hover, .mobileMenuLangBtn:focus {
+  background: #0F173E;
+  color: #fff;
+  border: 2px solid #fff;
 }
 

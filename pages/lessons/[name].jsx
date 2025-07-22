@@ -1,100 +1,132 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import App from "../../components/layouts/app";
-import styles from "../../styles/lessons.module.css"
-import Image from "next/image";
-import {useRouter} from "next/router";
-import {designLessons, lessons} from "@/utils/utils";
+import styles from "../../styles/lessons.module.css";
+import { useRouter } from "next/router";
+import { getLessons } from "@/utils/utils";
 import Head from "next/head";
-
+import { Button, Modal, Form, Input, DatePicker, message } from 'antd';
 
 const Name = () => {
     const router = useRouter();
-    const {name} = router.query;
-    const [content, setContent] = useState({});
+    const { name } = router.query;
+    const { locale } = useRouter();
+    const [content, setContent] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [form] = Form.useForm();
+
     useEffect(() => {
-        console.log(designLessons.find(x => x.title === name))
-        const data = designLessons.find(x => x.title === name);
-        const cont = data === undefined ? lessons.find(x => x.title === name) : data;
-        setContent(cont)
-    }, [router.query]);
+        if (name) {
+            const lessons = getLessons();
+            const data = lessons.find(x => x.slug === name);
+            setContent(data);
+        }
+    }, [name]);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+        form.resetFields();
+    };
+
+    const handleOk = () => {
+        form.validateFields()
+            .then(values => {
+                message.success('Application submitted!');
+                setIsModalOpen(false);
+                form.resetFields();
+            })
+            .catch(() => {});
+    };
+
+    const getLocalizedText = (field) => {
+        return locale === 'hy'
+            ? field?.hy
+            : locale === 'ge'
+                ? field?.ge
+                : field?.en;
+    };
 
     return (
-        <>
+        <App>
             <Head>
-                <title>{content?.title} - GeekLab</title>
-                <meta name="keywords"
-                      content={`${content?.title}, AutoCAD`}/>
-                <meta name="robots" content="index, follow"/>
-                <meta name="author" content="Your Name or GeekLab Team"/>
-                <link rel="canonical" href={`https://www.yourwebsite.com/lessons/${content?.slug}`}/>
-                {/* Open Graph meta tags for better social sharing */}
-                <meta property="og:title" content={`${content?.title} - GeekLab`}/>
-                <meta property="og:type" content="article"/>
+                <title>{getLocalizedText(content?.title)}</title>
+                <meta name="description" content={getLocalizedText(content?.content)} />
+                <meta name="keywords" content="GeekLab, programming, development, design, marketing, lessons, courses, learning" />
+                <meta property="og:title" content={getLocalizedText(content?.title)} />
+                <meta property="og:description" content={getLocalizedText(content?.content)} />
+                <link rel="canonical" href={`https://www.yourwebsite.com/lessons/${content?.slug}`} />
             </Head>
-            <App>
-                <div className={styles.main}>
-                    <div className={styles.ParentCourse}>
-                        <div className={styles.courses}>
-                            <div className={styles.courseName}>
-                                <h4>Welcome to <span>{content?.title}!</span></h4>
-                                <p>{content?.content}</p>
-                            </div>
-                            {/*<div className={styles.signUp}>*/}
-                            {/*    <div className={styles.join}><p>Join us and elevate your design prowess today!</p></div>*/}
-                            {/*    <div className={styles.btnSignUp}>*/}
-                            {/*        <a href="tel:+37444777344" className="signup-button">*/}
-                            {/*            <button>Sign up</button>*/}
-                            {/*        </a>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
-                        </div>
-                        <div className={styles.courseInfo}>
-                            <div className={styles.informationParent}>
-                                <div className={styles.information}>
-                                    <Image width={100} height={100} src="/Frame1.png" alt=""/>
-                                    <p>Duration</p>
-                                    <p>{content?.duration}</p>
-                                </div>
-                                <div className={styles.information}>
-                                    <Image width={100} height={100} src="/Frame2.png" alt=""/>
-                                    <p>Monthly fee</p>
-                                    <p>{content?.price}</p>
-                                </div>
-                            </div>
-                            <div className={styles.informationParent}>
-                                <div className={styles.information}>
-                                    <Image width={100} height={100} src="/Frame3.png" alt=""/>
-                                    <p>Deadline</p>
-                                    <p>{content?.Deadline}</p>
-                                </div>
-                                <div className={styles.information}>
-                                    <Image width={100} height={100} src="/Frame4.png" alt=""/>
-                                    <p>Frequency</p>
-                                    <p>2 days a week for
-                                        2 hours</p>
-                                </div>
-                            </div>
-                        </div>
-                        {/*<div className={styles.Statistics}>*/}
-                            {/*<div className={styles.staticChildren}>*/}
-                            {/*    <span>Statistics</span>*/}
-                            {/*</div>*/}
-                            {/*<div className={styles.ParentStaticChildren}>*/}
-                                {/*<div className={styles.staticChildren}>*/}
-                                {/*    <span>600,000</span>*/}
-                                {/*    <p>Avarage salary</p>*/}
-                                {/*</div>*/}
-                                {/*<div className={styles.staticChildren}>*/}
-                                {/*    <span>15+</span>*/}
-                                {/*    <p>Vacancies</p>*/}
-                                {/*</div>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
-                    </div>
-                </div>
 
-            </App>
-        </>
+            <div className={styles.lessonPageContainer}>
+                <div className={styles.lessonCard}>
+                    <h1 className={styles.lessonTitle}>
+                        {getLocalizedText(content?.title)}
+                    </h1>
+                    <p className={styles.lessonDescription}>
+                        {getLocalizedText(content?.content)}
+                    </p>
+                    <Button
+                        type="primary"
+                        className={styles.applyButton}
+                        onClick={showModal}
+                    >
+                        Apply Now
+                    </Button>
+                </div>
+            </div>
+
+            <Modal
+                title="Apply for this Lesson"
+                open={isModalOpen}
+                onOk={handleOk}
+                onCancel={handleCancel}
+                okText="Submit"
+                cancelText="Cancel"
+            >
+                <Form
+                    form={form}
+                    layout="vertical"
+                    name="applyForm"
+                >
+                    <Form.Item
+                        name="name"
+                        label="Full Name"
+                        rules={[{ required: true, message: 'Please enter your name' }]}
+                    >
+                        <Input placeholder="John Doe" />
+                    </Form.Item>
+                    <Form.Item
+                        name="email"
+                        label="Email"
+                        rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}
+                    >
+                        <Input placeholder="john@example.com" />
+                    </Form.Item>
+                    <Form.Item
+                        name="phone"
+                        label="Phone Number"
+                        rules={[{ required: true, message: 'Please enter your phone number' }]}
+                    >
+                        <Input placeholder="+1234567890" />
+                    </Form.Item>
+                    <Form.Item
+                        name="birthday"
+                        label="Birthday"
+                        rules={[{ required: true, message: 'Please select your birthday' }]}
+                    >
+                        <DatePicker
+                            picker="date"
+                            style={{ width: '100%' }}
+                            placeholder="YYYY-MM-DD"
+                            format="YYYY-MM-DD"
+                        />
+                    </Form.Item>
+                </Form>
+            </Modal>
+        </App>
     );
 };
 

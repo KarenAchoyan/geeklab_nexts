@@ -1,350 +1,39 @@
-.main{
-    padding-top: 40px;
-    padding-bottom: 60px;
-}
-.ParentCourse{
-    width: 80%;
-    background:transparent;
-    margin: auto;
-    background: linear-gradient(to right top,#0A0A0B, #0F173E, #0A0A0B, #0D0E1D,#0A0A0B);
-    border-radius: 30px;
-    padding: 30px;
-}
-
-.courses{
-    width: 100%;
-    display: flex;
-    margin-bottom: 60px;
-    padding-top: 60px;
-}
-.courseName{
-    width: calc(100% / 1 - 127px);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.courseName h4{
-    font-family: MontserratBold;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: white;
-}
-.courseName  h4 span{
-    font-family: MontserratRegular;
-}
-.courseName p{
-    font-family: MontserratRegular;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFFB2;
-    margin-top: 80px;
-}
-.courseName span{
-    font-family: Montserrat;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #61FF00;
-
-}
-.signUp{
-    width: calc(100% / 2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-.join{
-    width: 100%;
-    height: 94%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.join p{
-    font-family: MontserratRegular;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFFB2;
-
-}
-.btnSignUp{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-}
-.btnSignUp button{
-    width:214px;
-    height:64px;
-    padding: 18px 37px 18px 37px;
-    border-radius: 30px;
-    background: #012DF0;
-    font-size: 22px;
-    color: white;
-    border: none;
-
-}
-.btnSignUp button:hover{
-    color: #012DF0;
-    background-color: white;
-    cursor: pointer;
-    border: 2px solid #012DF0;
-}
-.courseInfo{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #FFFFFFB2;
-    border-bottom: 1px solid #FFFFFFB2;
-}
-.informationParent{
-    width: calc(100% / 2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-
-}
-.information{
-    width:calc(100% / 2);
-    border-right: 1px solid #FFFFFFB2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-}
-.informationParent:last-child .information:last-child{
-    border-right: 0;
-}
-.information img{
-    padding-top: 3px;
-    margin-bottom: 10px;
-    width: 30px;
-    height: 30px;
-
-}
-.information p{
-    font-family: MontserratRegular;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    color:#FFFFFFB2;
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-.Statistics{
-    width: 76%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-}
-.ParentStaticChildren{
-    width: 100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.ParentStaticChildren:last-child .staticChildren:last-child{
-    margin-left: 30px;
-}
-.staticChildren{
-    width:calc(90% / 2);
+.lessonPageContainer {
+    background: linear-gradient(to bottom right, #f4f6f8, #e0e7ef);
+    min-height: 70vh;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
-    padding: 5px 10px;
 }
 
-
-.staticChildren span{
-    font-family: MontserratBold;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFFB2;
-}
-.staticChildren p{
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 0em;
-    color: #FFFFFFB2;
-
-}
-.container{
-    width: 90%;
-    margin: auto;
+.lessonCard {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
     padding: 40px;
-    border-radius: 30px;
-}
-.container h2, .container p{
-    color: white;
-}
-.container input{
-    background-color: transparent;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
 }
 
-
-@media only screen and (max-width: 1100px){
-    .courses{
-        width: 100%;
-        display: flex;
-        margin-bottom: 60px;
-        padding-top: 60px;
-        flex-wrap: wrap;
-        justify-content: center;
-
-    }
-    .courseName{
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .courseName p{
-        text-align: center;
-        font-size: 20px;
-    }
-    .signUp{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-
-        }
-    .join{
-        width: calc(60% / 2);
-        height: 94%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .btnSignUp{
-        width: 30%;
-        height: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-
-    }
-    .courseInfo{
-        width:50%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        border-top: 1px solid #FFFFFFB2;
-        border-bottom: 1px solid #FFFFFFB2;
-    }
-    .informationParent{
-        width: calc(100% / 1);
-        border-bottom: 1px solid #FFFFFFB2 ;
-    }
-    .information{
-        width:calc(100% / 2);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .information:last-child{
-        border-right: 0;
-    }
-    .Statistics{
-        width: 100%;
-        height: 200px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 20px;
-        padding-bottom: 20px;
-
-    }
-    .staticChildren{
-        width:calc(100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+.lessonTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 24px;
 }
 
-@media only screen and (max-width: 950px) {
-    .courseInfo{
-        width: 95%;
-       margin-top: 80px;
-    }
-    .courseName, .btnSignUp, .join{
-        width: 95%;
-        text-align: center;
-    }
-    .btnSignUp{
-        padding: 20px 0;
-    }
-    .join p{
-        text-align: center;
-    }
-    .courseName p, .courseName h4{
-        text-align: center;
-    }
-    .staticChildren{
-        width:calc(100%);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .staticChildren span{
-        font-size: 28px;
-    }
-
+.lessonDescription {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 32px;
 }
-@media only screen and (max-width: 431px) {
 
-    .information p{
-        font-size: 15px;
-    }
-    .staticChildren span{
-        font-size: 26px;
-    }
-    .btnSignUp button{
-        padding: 15px 0;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-    .container h2{
-        font-size: 31px;
-    }
-    .container p{
-        font-size: 16px;
-        text-align: center;
-
-    }
+.applyButton {
+    background-color: #1677ff !important;
+    border-color: #1677ff !important;
+    font-weight: 600;
+    border-radius: 8px;
 }

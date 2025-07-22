@@ -19,7 +19,8 @@ export const validateEmail = (rule, value) => {
 
 export const languages = [
     {id: 1, name: "EN", fullName: "English", value: 'en', flag: "/english.webp"},
-    {id: 3, name: "Հայ", fullName: "Հայերեն", value: 'hy', flag: "/amFlag.png"},
+    {id: 3, name: "ARM", fullName: "Հայերեն", value: 'hy', flag: "/amFlag.png"},
+    {id: 4, name: "GE", fullName: "ქართული", value: 'ge', flag: "/amFlag.png"},
 ];
 
 export const validatePassword = (rule, value) => {
@@ -30,75 +31,133 @@ export const validatePassword = (rule, value) => {
 };
 
 export const designLessons = []
-
 export const lessons = [
     {
         id: 4,
-        title: "Front-end development",
+        slug: "Front-end-development",
+        title: {
+            en: "Front-end development",
+            hy: "Front-end ծրագրավորում",
+            ge: "Front-end დეველოპმენტი"
+        },
         duration: "6 ",
         price: "40.000",
         Deadline: "15/07/2024",
         isWhite: true,
-        content: "Welcome to GeekLab, where we're dedicated to cultivating the next generation of front-end developers. Our Front-end Development Bootcamp is designed to equip you with the skills and knowledge needed to thrive in the dynamic world of web development. Whether you're a beginner or an experienced coder, this course will empower you to create stunning, interactive web experiences using the latest technologies.Front-end development is the art of bringing web designs to life, creating engaging user interfaces, and crafting seamless user experiences. In this comprehensive bootcamp, you'll dive deep into the core technologies of modern web development, including HTML, CSS, JavaScript, React, and Next.js. From building static web pages to developing dynamic web applications, you'll learn everything you need to succeed as a front-end developer."
+        branchs:['georgia', 'armenia'],
+        content: {
+            en: "Welcome to GeekLab, where we're dedicated to cultivating the next generation of front-end developers. Our Front-end Development Bootcamp is designed to equip you with the skills and knowledge needed to thrive in the dynamic world of web development.",
+            hy: "Բարի գալուստ GeekLab, որտեղ մենք նվիրված ենք front-end ծրագրավորողների հաջորդ սերնդի զարգացմանը: Front-end-ի մեր ինտենսիվ դասընթացը նախատեսված է զինելու ձեզ այն հմտություններով և գիտելիքներով, որոնք անհրաժեշտ են վեբ մշակման դինամիկ աշխարհում հաջողության հասնելու համար:",
+            ge: "მოგესალმებით GeekLab-ში, სადაც ჩვენ ვზრდით front-end დეველოპერების მომავალ თაობას. ჩვენი Front-end დეველოპმენტის ბანაკი შექმნილია იმისთვის, რომ მოგაწოდოთ უნარები და ცოდნა, რომელიც საჭიროა ვებ Փეველოპმენტის დინამიურ სამყაროში წარმატების მისაღწევად."
+        }
     },
     {
         id: 5,
-        title: "Python development",
+        slug: "Python-development",
+        title: {
+            en: "Python development",
+            hy: "Python ծրագրավորում",
+            ge: "Python დეველოპმენტი"
+        },
         duration: "6 ",
         price: "55.000",
         Deadline: "15/07/2024",
+        branchs:['georgia', 'armenia'],
         isWhite: false,
-        content: "Welcome to GeekLab, your ultimate destination for cutting-edge tech education. At GeekLab, we believe in empowering individuals with the skills they need to thrive in today's digital landscape. Our Python Development Mastery course is designed to equip you with the knowledge and expertise to become a proficient Python developer. Python has emerged as one of the most popular programming languages due to its versatility, simplicity, and robust community support. Whether you're a beginner looking to dive into the world of programming or an experienced developer seeking to expand your skill set, this course is tailored to meet your needs."
+        content: {
+            en: "Welcome to GeekLab, your ultimate destination for cutting-edge tech education. At GeekLab, we believe in empowering individuals with the skills they need to thrive in today's digital landscape.",
+            hy: "Բարի գալուստ GeekLab, ձեր վերջնական նպատակակետը առաջատար տեխնոլոգիական կրթության համար: GeekLab-ում մենք հավատում ենք անհատներին հզորացնելու այն հմտություններով, որոնք նրանց անհրաժեշտ են այսօրվա թվային լանդշաֆտում հաջողության հասնելու համար:",
+            ge: "მოგესალმებით GeekLab-ში, თქვენს საბოლოო დანიშნულების ადგილას უახლესი ტექნოლოგიური განათლებისთვის. GeekLab-ში ჩვენ გვჯერა, რომ ადამიანებს მივცეთ ის უნარები, რაც მათ სჭირდებათ დღევანდელ ციფრულ ლანდშაფტში წარმატების მისაღწევად."
+        }
     },
     {
         id: 6,
-        title: "MANUAL QA",
+        slug: "MANUAL-QA",
+        title: {
+            en: "MANUAL QA",
+            hy: "MANUAL QA",
+            ge: "MANUAL QA"
+        },
         duration: "2 ",
         price: "55.000",
         Deadline: "15/07/2024",
+        branchs:['georgia', 'armenia'],
         isWhite: false,
-        content: "Manual QA is an essential part of the software testing process where testers manually execute test cases without the use of automation tools. Manual QA ensures that software applications meet specified requirements, function correctly, and are free of defects before they are released to end-users.At GeekLab, we offer comprehensive Manual QA training programs designed to equip you with the knowledge and skills needed to excel in this critical role. Our courses cover a wide range of topics, including test planning, test case design, test execution, defect reporting, and regression testing."
+        content: {
+            en: "Manual QA is an essential part of the software testing process where testers manually execute test cases without the use of automation tools. Manual QA ensures that software applications meet specified requirements, function correctly, and are free of defects before they are released to end-users.",
+            hy: "Որակի ձեռքով ստուգումը (Manual QA) ծրագրային ապահովման թեստավորման գործընթացի կարևոր մասն է, որտեղ թեստավորողները ձեռքով են կատարում թեստային դեպքերը՝ առանց ավտոմատացման գործիքների օգտագործման: Manual QA-ն ապահովում է, որ ծրագրային հավելվածները համապատասխանում են սահմանված պահանջներին, աշխատում են ճիշտ և զերծ են թերություններից՝ նախքան դրանք վերջնական օգտագործողներին թողարկելը:",
+            ge: "ხარისხის ხელით შემოწმება (Manual QA) არის პროგრამული უზრუნველყოფის ტესტირების პროცესის აუცილებელი ნაწილი, სადაც ტესტერები ხელით ასრულებენ სატესტო შემთხვევებს ავტომატიზაციის ხელსაწყოების გამოყენების გარეშე. Manual QA უზრუნველყოფს, რომ პროგრამული პროგრამები აკმაყოფილებს მითითებულ მოთხოვნებს, მუშაობს სწორად და არ არის დეფექტებისგან, სანამ ისინი საბოლოო მომხმარებლებს გამოუშვებენ."
+        }
     },
     {
         id: 1,
-        title: "AutoCad",
+        slug: "AutoCad",
+        title: {
+            en: "AutoCad",
+            hy: "AutoCad",
+            ge: "AutoCad"
+        },
         duration: "3 ",
         price: "35.000 ",
         Deadline: "15/07/2024",
+        branchs:['georgia', 'armenia'],
         isWhite: true,
-        content: "Our AutoCAD courses cover everything from the basics of navigation and drawing tools to advanced techniques for creating precise and intricate designs. You'll learn how to draft 2D plans, model in 3D, annotate drawings, and customize your workspace for maximum efficiency. With hands-on exercises and practical projects, you'll gain the confidence to tackle any design challenge."
+        content: {
+            en: "Our AutoCAD courses cover everything from the basics of navigation and drawing tools to advanced techniques for creating precise and intricate designs. You'll learn how to draft 2D plans, model in 3D, annotate drawings, and customize your workspace for maximum efficiency.",
+            hy: "Մեր AutoCAD-ի դասընթացներն ընդգրկում են ամեն ինչ՝ սկսած նավիգացիայի և նկարչական գործիքների հիմունքներից մինչև ճշգրիտ և բարդ նմուշներ ստեղծելու առաջադեմ տեխնիկա: Դուք կսովորեք, թե ինչպես կազմել 2D պլաններ, մոդելավորել 3D ձևաչափով, ծանոթագրել գծագրերը և հարմարեցնել ձեր աշխատանքային տարածքը առավելագույն արդյունավետության համար:",
+            ge: "ჩვენი AutoCAD-ის კურსები მოიცავს ყველაფერს, დაწყებული նავიგაციისა და ხატვის ხელსაწყოების საფუძვლებიდან დაწყებული, ზუსტი და რთული დიზაინის შექმნის მოწინავე ტექნიკით დამთავრებული. თქვენ შეისწავლით თუ როგორ შეადგინოთ 2D გეგმები, მოდელირდეთ 3D-ში, მოაწეროთ ნახატები და მოარგოთ თქვენი სამუშაო სივრცე მაქსიმალური ეფექტურობისთვის."
+        }
     },
     {
         id: 2,
-        title: "Interior Design",
+        slug: "Interior-Design",
+        title: {
+            en: "Interior Design",
+            hy: "Ինտերիերի դիզայն",
+            ge: "ინტერიერის დიზაინი"
+        },
         duration: "6 ",
         price: "50.000 ",
         Deadline: "15/07/2024",
+        branchs:['georgia', 'armenia'],
         isWhite: false,
-        content: "Unlock the secrets of interior design with our expert-led courses. Explore the principles of design, color theory, space planning, and furniture arrangement to create harmonious and functional interiors. From conceptualization to execution, you'll learn how to bring your design ideas to life while considering factors such as client preferences, budget constraints, and building codes."
+        content: {
+            en: "Unlock the secrets of interior design with our expert-led courses. Explore the principles of design, color theory, space planning, and furniture arrangement to create harmonious and functional interiors.",
+            hy: "Բացահայտեք ինտերիերի դիզայնի գաղտնիքները մեր փորձագետների կողմից վարվող դասընթացների միջոցով: Բացահայտեք դիզայնի, գունային տեսության, տարածության պլանավորման և կահույքի դասավորության սկզբունքները՝ ներդաշնակ և ֆունჯցիոნალური ինտերիեր ստեղծելու համար:",
+            ge: "გახსენით ინტერიერის დიზაინის საიდუმლოებები ჩვენი ექსპერტების ხელმძღვანელობით კურსებით. გამოიკვლიეთ დიზაინის პრინციპები, ფერის თეორია, სივრცის დაგეგმვა და ავეჯის მოწყობა ჰარმონიული და ფუნქციონალური ინტერიერის შესაქმნელად."
+        }
     },
     {
         id: 3,
-        title: "Rhinoceros",
+        slug: "Rhinoceros",
+        title: {
+            en: "Rhinoceros",
+            hy: "Rhinoceros",
+            ge: "Rhinoceros"
+        },
         duration: "3 ",
         price: "100.000 ",
         Deadline: "15/07/2024",
+        branchs:['georgia', 'armenia'],
         isWhite: false,
-        content: "Rhinoceros, commonly known as Rhino, is a versatile 3D modeling tool renowned for its flexibility and precision. Whether you're sculpting organic forms, designing intricate architectural structures, or engineering complex mechanical parts, Rhino provides the tools you need to bring your ideas to life with unparalleled accuracy and efficiency.\n" +
-            "\nAt GeekLab, we offer comprehensive Rhino courses designed to cater to all skill levels, from beginners to advanced users. Our lessons cover the fundamentals of navigating the Rhino interface, creating and manipulating 3D geometry, applying textures and materials, and generating detailed technical drawings and renderings."
+        content: {
+            en: "Rhinoceros, commonly known as Rhino, is a versatile 3D modeling tool renowned for its flexibility and precision. Whether you're sculpting organic forms, designing intricate architectural structures, or engineering complex mechanical parts, Rhino provides the tools you need to bring your ideas to life with unparalleled accuracy and efficiency.",
+            hy: "Rhinoceros-ը, որը հայտնի է որպես Rhino, բազմակողմանի 3D մոդելավորման գործիք է, որը հայտնի է իր ճկունությամբ և ճշգրտությամբ: Անկախ նրանից, թե դուք քանդակում եք օրգանական ձևեր, նախագծում եք բարդ ճարտարապետական կառույցներ, թե մշակում եք բարդ մեխանիկական մասեր, Rhino-ն տրամադրում է ձեզ անհրաժեշտ գործիքները՝ ձեր գաղափարներն անզուգական ճշգրտությամբ և արդյունավետությամբ կյանքի կոչելու համար:",
+            ge: "Rhinoceros, საყოველთაოდ ცნობილი როგორც Rhino, არის მრავალმხრივი 3D მოდელირების ინსტრუმენტი, რომელიც ცნობილია თავისი მოქნილობითა და სიზუსტით. მიუხედავად იმისა, თქვენ ძერწავთ ორგანულ ფორმებს, აპროექტებთ რთულ არქიტექტურულ სტრუქტურებს, თუ აპროექტებთ რთულ მექანიკურ ნაწილებს, Rhino გაძლევთ ინსტრუმენტებს, რომლებიც გჭირდებათ თქვენი იდეების განსახორციელებლად შეუდარებელი სიზუსტითა და ეფექტურობით."
+        }
     },
 
 ];
 
-export function t(key) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const intl = useIntl();
-
-    const title = intl.formatMessage({id: key})
-    return title;
-}
-
+export const getLessons = () => {
+    if (typeof window !== 'undefined') {
+        const branch = localStorage.getItem('branch');
+        if (branch) {
+            return lessons.filter(lesson => lesson.branchs.includes(branch));
+        }
+    }
+    return lessons;
+};
 
 export const portfolios = [
     {id: 1, image: "/eua.png", title: "European University of Armenia", path:"https://eua.am/"},
@@ -177,3 +236,4 @@ export const menuItems = [
         path: '/profile/students',
     },
 ];
+
