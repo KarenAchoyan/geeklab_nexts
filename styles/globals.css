@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #6C63FF;
+  --color-accent: #D600B4;
+  --color-bg: #181818;
+  --color-bg-card: #23272F;
+  --color-text: #FFFFFF;
+  --color-text-accent: #F5EECB;
+  --color-text-secondary: #B0B3B8;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +43,8 @@
 
    */
 
+
+
   .logo {
     height: 32px;
     background: rgba(255, 255, 255, 0.2);
@@ -63,4 +75,15 @@
 
   .ant-menu-horizontal {
     border-bottom: none;
+  }
+
+
+
+  .ant-collapse-header{
+    display: flex;
+    align-items: center!important;
+    color: white!important;
+    font-size: 24px!important;
+    font-weight: 700;
+    font-family: MontserratBold;
   }

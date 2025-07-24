@@ -4,7 +4,10 @@ import styles from "../../styles/lessons.module.css";
 import { useRouter } from "next/router";
 import { getLessons } from "@/utils/utils";
 import Head from "next/head";
-import { Button, Modal, Form, Input, DatePicker, message } from 'antd';
+import { Button, Modal, Form, Input, DatePicker, message, Collapse } from 'antd';
+import { CheckOutlined, PlusOutlined } from '@ant-design/icons';
+
+const { Panel } = Collapse;
 
 const Name = () => {
     const router = useRouter();
@@ -34,7 +37,7 @@ const Name = () => {
     const handleOk = () => {
         form.validateFields()
             .then(values => {
-                message.success('Application submitted!');
+                message.success('Հայտը հաջողությամբ ուղարկվեց!');
                 setIsModalOpen(false);
                 form.resetFields();
             })
@@ -49,6 +52,8 @@ const Name = () => {
                 : field?.en;
     };
 
+    if (!content) return null;
+
     return (
         <App>
             <Head>
@@ -60,31 +65,112 @@ const Name = () => {
                 <link rel="canonical" href={`https://www.yourwebsite.com/lessons/${content?.slug}`} />
             </Head>
 
-            <div className={styles.lessonPageContainer}>
-                <div className={styles.lessonCard}>
-                    <h1 className={styles.lessonTitle}>
-                        {getLocalizedText(content?.title)}
-                    </h1>
-                    <p className={styles.lessonDescription}>
+            {/* Hero Section */}
+            <div className={styles.heroSection}>
+                <div className={styles.heroContent}>
+                    <h1 className={styles.heroTitle}>{getLocalizedText(content?.title) || 'Web Development'}<br />Level Up</h1>
+                    <div className={styles.heroSubtitle}>
+                        <span className={styles.gearIcon}>⚙️</span>
+                        Ծրագիրը կազմված է Picsart-ի կողմից
+                    </div>
+                    <div className={styles.heroText}>
                         {getLocalizedText(content?.content)}
-                    </p>
+                    </div>
+                    {content?.program && (
+                        <ul className={styles.featureList}>
+                            {content.program.map((mod, idx) => (
+                                <li key={idx}><b>{getLocalizedText(mod)}</b><CheckOutlined className={styles.checkIconRight} /></li>
+                            ))}
+                        </ul>
+                    )}
                     <Button
                         type="primary"
-                        className={styles.applyButton}
+                        className={styles.ctaButton}
                         onClick={showModal}
                     >
-                        Apply Now
+                        ԴԱՍԸՆԹԱՑԻ ՀԱՄԱՐ
+                    </Button>
+                </div>
+                <div className={styles.heroImageWrap}>
+                    {/* Placeholder for JS/React image */}
+                    <img src="/public/Frame1.png" alt="JS" className={styles.heroImage} />
+                </div>
+            </div>
+
+            {/* Accordion Section */}
+            <div className={styles.accordionSection}>
+                <h2 className={styles.sectionTitle}>
+                    Դասընթացի հիմնական փուլերը
+                </h2>
+                <div className={styles.accordionWrap}>
+                    <Collapse accordion bordered={false} className={styles.collapse}
+                        expandIcon={({ isActive }) => <span><PlusOutlined rotate={isActive ? 45 : 0} className={styles.plusIcon} /></span>}>
+                        {content?.program && content.program.map((mod, idx) => (
+                            <Panel
+                                header={<div className={styles.panelHeader}><span className={styles.panelHeaderHy}>{mod.hy}</span><span className={styles.panelHeaderEn}>{mod.en}</span></div>}
+                                key={idx}
+                                className={styles.panel}
+                            >
+                                <div className={styles.panelContent}>Բովանդակություն շուտով...</div>
+                            </Panel>
+                        ))}
+                    </Collapse>
+                </div>
+            </div>
+
+            {/* Pricing Section */}
+            <div className={styles.pricingSection}>
+                <div className={styles.pricingCard}>
+                    <div className={styles.pricingTitle}>8 ամիս՝<br />89,000 դրամ ամսական</div>
+                    <div className={styles.pricingSub}>Կամ ~36,000 դրամ ամսական (24 ամիս ապառիկ տարբերակով)</div>
+                    <div className={styles.pricingText}>Դասընթացի տևողությունը 3-4 օր՝ շաբաթական 2 ժամ</div>
+                    <div className={styles.pricingText}>Դասընթացի ավարտին ուսանողները կստանան երկլեզու հավաստագիր։</div>
+                    <Button
+                        type="primary"
+                        className={styles.ctaButton}
+                        onClick={showModal}
+                    >
+                        Դիմել հիմա
                     </Button>
                 </div>
             </div>
 
+            {/* FAQ Section */}
+            <div className={styles.faqSection}>
+                <h2 className={styles.sectionTitle}>
+                    Հաճախ տրվող հարցեր
+                </h2>
+                <div className={styles.accordionWrap}>
+                    <Collapse accordion bordered={false} className={styles.collapse}
+                        expandIcon={({ isActive }) => <PlusOutlined rotate={isActive ? 45 : 0} className={styles.plusIcon} />}> 
+                        {content?.faq && content.faq.map((faq, idx) => (
+                            <Panel
+                                header={<span className={styles.faqHeader}>{faq.q}</span>}
+                                key={idx}
+                                className={styles.panel}
+                            >
+                                <div className={styles.panelContent}>{faq.a}</div>
+                            </Panel>
+                        ))}
+                    </Collapse>
+                </div>
+            </div>
+
+            {/* Description Section */}
+            <div className={styles.descSection}>
+                <div className={styles.descCard}>
+                    {getLocalizedText(content?.content)}
+                </div>
+            </div>
+
+            {/* Application Modal */}
             <Modal
-                title="Apply for this Lesson"
+                title="Դիմել այս դասընթացին"
                 open={isModalOpen}
                 onOk={handleOk}
                 onCancel={handleCancel}
-                okText="Submit"
-                cancelText="Cancel"
+                okText="Ուղարկել"
+                cancelText="Փակել"
             >
                 <Form
                     form={form}
@@ -93,29 +179,29 @@ const Name = () => {
                 >
                     <Form.Item
                         name="name"
-                        label="Full Name"
-                        rules={[{ required: true, message: 'Please enter your name' }]}
+                        label="Անուն Ազգանուն"
+                        rules={[{ required: true, message: 'Խնդրում ենք լրացնել անուն ազգանունը' }]}
                     >
-                        <Input placeholder="John Doe" />
+                        <Input placeholder="Անուն Ազգանուն" />
                     </Form.Item>
                     <Form.Item
                         name="email"
-                        label="Email"
-                        rules={[{ required: true, type: 'email', message: 'Please enter a valid email' }]}
+                        label="Էլ. հասցե"
+                        rules={[{ required: true, type: 'email', message: 'Խնդրում ենք լրացնել վավեր էլ. հասցե' }]}
                     >
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="mail@example.com" />
                     </Form.Item>
                     <Form.Item
                         name="phone"
-                        label="Phone Number"
-                        rules={[{ required: true, message: 'Please enter your phone number' }]}
+                        label="Հեռախոսահամար"
+                        rules={[{ required: true, message: 'Խնդրում ենք լրացնել հեռախոսահամարը' }]}
                     >
-                        <Input placeholder="+1234567890" />
+                        <Input placeholder="+374..." />
                     </Form.Item>
                     <Form.Item
                         name="birthday"
-                        label="Birthday"
-                        rules={[{ required: true, message: 'Please select your birthday' }]}
+                        label="Ծննդյան օր"
+                        rules={[{ required: true, message: 'Խնդրում ենք նշել ծննդյան օրը' }]}
                     >
                         <DatePicker
                             picker="date"

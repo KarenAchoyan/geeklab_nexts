@@ -1,5 +1,5 @@
 .lessonPageContainer {
-    background: linear-gradient(to bottom right, #f4f6f8, #e0e7ef);
+    background: linear-gradient(to bottom right, var(--color-bg), #222a36);
     min-height: 70vh;
     padding-top: 100px;
     display: flex;
@@ -8,9 +8,9 @@
 }
 
 .lessonCard {
-    background-color: #ffffff;
+    background-color: var(--color-bg-card);
     border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
     padding: 40px;
     max-width: 800px;
     width: 100%;
@@ -18,22 +18,316 @@
 }
 
 .lessonTitle {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--color-text);
     margin-bottom: 24px;
 }
 
 .lessonDescription {
     font-size: 18px;
     line-height: 1.7;
-    color: #475569;
+    color: var(--color-text);
     margin-bottom: 32px;
 }
 
 .applyButton {
-    background-color: #1677ff !important;
-    border-color: #1677ff !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
     font-weight: 600;
     border-radius: 8px;
+    color: var(--color-text) !important;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 500px;
+  background: var(--color-bg);
+  padding: 40px 5vw 0 5vw;
+}
+.heroContent {
+  max-width: 600px;
+}
+.heroTitle {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.heroSubtitle {
+  color: var(--color-text-accent);
+  margin: 30px 0 10px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.gearIcon {
+  font-size: 20px;
+}
+.heroText {
+  color: var(--color-text);
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.featureList {
+  color: var(--color-text);
+  font-size: 22px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+.featureList li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkIcon {
+  color: var(--color-text-accent);
+  font-size: 24px;
+  margin-right: 10px;
+}
+.checkIconRight {
+  float: right;
+  color: var(--color-text-accent);
+  font-size: 24px;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+.ctaButton {
+  background: var(--color-accent) !important;
+  border: none !important;
+  font-size: 18px !important;
+  border-radius: 10px !important;
+  padding: 8px 32px !important;
+  font-weight: 600 !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 2px 12px #d600b455;
+  transition: background 0.2s;
+  height: auto!important;
+}
+.ctaButton:hover {
+  background: var(--color-primary) !important;
+}
+.heroImageWrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.heroImage {
+  width: 350px;
+  filter: drop-shadow(0 0 80px #6C63FF44);
+  border-radius: 24px;
+  background: #fff1;
+}
+
+/* Accordion Section */
+.accordionSection {
+  background: var(--color-bg);
+  padding: 40px 0;
+}
+.sectionTitle {
+  color: white!important;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+}
+.accordionWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.collapse {
+  background: none !important;
+}
+.plusIcon {
+  color: var(--color-text-accent);
+  font-size: 32px !important;
+}
+.panelHeader {
+  display: flex;
+  flex-direction: column;
+}
+.panelHeaderHy {
+  color: var(--color-text-accent);
+  font-weight: 700;
+  font-size: 24px;
+}
+.panelHeaderEn {
+  color: var(--color-text);
+  font-size: 26px;
+}
+.panel {
+  background: var(--color-bg-card) !important;
+  border-radius: 24px !important;
+  margin-bottom: 24px !important;
+  border: none !important;
+}
+.panelContent {
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+/* Pricing Section */
+.pricingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg);
+  padding: 40px 0;
+}
+.pricingCard {
+  background: radial-gradient(circle, var(--color-bg-card) 60%, var(--color-bg) 100%);
+  border-radius: 40px;
+  padding: 40px 60px;
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 0 80px #6C63FF22;
+}
+.pricingTitle {
+  color: var(--color-text-accent);
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.pricingSub {
+  color: var(--color-text);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.pricingText {
+  color: var(--color-text);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faqSection {
+  background: var(--color-bg);
+  padding: 40px 0;
+}
+.faqHeader {
+  color: var(--color-text-accent);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* Description Section */
+.descSection {
+  background: var(--color-bg);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descCard {
+  background: radial-gradient(circle, var(--color-bg-card) 60%, var(--color-bg) 100%);
+  border-radius: 24px;
+  padding: 40px 60px;
+  max-width: 1400px;
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 0 80px #6C63FF22;
+}
+
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    min-height: unset;
+    padding: 24px 2vw 0 2vw;
+    gap: 32px;
+  }
+  .heroContent {
+    max-width: 100%;
+    text-align: center;
+  }
+  .heroTitle {
+    font-size: 36px;
+  }
+  .heroSubtitle {
+    font-size: 16px;
+    margin: 20px 0 8px 0;
+    justify-content: center;
+  }
+  .heroText {
+    font-size: 14px;
+  }
+  .featureList {
+    font-size: 16px;
+  }
+  .heroImageWrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .heroImage {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .ctaButton {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    font-size: 16px !important;
+  }
+  .lessonCard {
+    padding: 24px 10px;
+  }
+  .accordionWrap {
+    max-width: 100vw;
+    padding: 0 4vw;
+  }
+  .pricingCard {
+    min-width: unset;
+    padding: 24px 10px;
+    border-radius: 24px;
+  }
+  .descCard {
+    padding: 24px 10px;
+    font-size: 16px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+  .sectionTitle {
+    font-size: 22px;
+  }
+  .panelHeaderHy, .panelHeaderEn {
+    font-size: 16px;
+  }
+  .faqHeader {
+    font-size: 16px;
+  }
+  .panelContent, .pricingText, .lessonDescription {
+    font-size: 14px;
+  }
+  .pricingTitle {
+    font-size: 22px;
+  }
+  .pricingSub {
+    font-size: 14px;
+  }
+  .descCard {
+    font-size: 14px;
+  }
 }
